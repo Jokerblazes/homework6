@@ -22,7 +22,7 @@ public class FizzBuzzGameTest {
     @Test
     public void should_return_Fizz_when_have_3() {
         List<String> expectedResults = Arrays.asList(
-                "1", "2", "Fizz", "4", "5", "Fizz", "7", "8", "Fizz", "10",
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz",
                 "11", "Fizz", "Fizz"
         );
         fizzBuzzGame.start(13);
@@ -33,7 +33,7 @@ public class FizzBuzzGameTest {
     @Test
     public void should_return_Fizz_when_is_3_multiple() {
         List<String> expectedResults = Arrays.asList(
-                "1", "2", "Fizz","4", "5", "Fizz"
+                "1", "2", "Fizz","4", "Buzz", "Fizz"
         );
         fizzBuzzGame.start(6);
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
