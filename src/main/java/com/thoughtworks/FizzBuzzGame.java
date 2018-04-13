@@ -56,9 +56,11 @@ public class FizzBuzzGame {
 
     private String isMultipleAndReturnResult(int num) {
         String result = "";
-        if (num % num1 == 0)
+        if (num % num1 == 0) {
             result += "Fizz";
-        else if (num % num2 == 0)
+            if (num % num2 == 0)
+                result += "Buzz";
+        } else if (num % num2 == 0)
             result += "Buzz";
         else if (num % num3 == 0)
             result += "Whizz";
