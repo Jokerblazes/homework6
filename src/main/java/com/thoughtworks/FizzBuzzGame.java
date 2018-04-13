@@ -58,16 +58,11 @@ public class FizzBuzzGame {
         String result = "";
         if (num % num1 == 0) {
             result += "Fizz";
-            if (num % num2 == 0)
-                result += "Buzz";
-            else if (num % num3 == 0)
-                result += "Whizz";
-        } else if (num % num2 == 0) {
-            result += "Buzz";
-            if (num % num3 == 0)
-                result += "Whizz";
         }
-        else if (num % num3 == 0)
+        if (num % num2 == 0) {
+            result += "Buzz";
+        }
+        if (num % num3 == 0)
             result += "Whizz";
         return result;
     }
