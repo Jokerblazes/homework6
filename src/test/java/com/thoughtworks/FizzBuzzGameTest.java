@@ -38,6 +38,16 @@ public class FizzBuzzGameTest {
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
     }
 
+    //5的倍数
+    @Test
+    public void should_return_Buzz_when_is_5_multiple() {
+        List<String> expectedResults = Arrays.asList(
+                "1", "2", "Fizz", "4", "Buzz"
+        );
+        fizzBuzzGame.start(5);
+        assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
+    }
 
+    
 
 }
