@@ -27,4 +27,15 @@ public class FizzBuzzGameTest {
         fizzBuzzGame.start(13);
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
     }
+
+    //3的倍数
+    @Test
+    public void should_return_Fizz_when_is_3_multiple() {
+        List<String> expectedResults = Arrays.asList(
+                "1", "2", "Fizz"
+        );
+        fizzBuzzGame.start(3);
+        assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
+    }
+
 }
