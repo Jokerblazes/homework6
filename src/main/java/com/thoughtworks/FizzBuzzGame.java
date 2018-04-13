@@ -62,8 +62,11 @@ public class FizzBuzzGame {
                 result += "Buzz";
             else if (num % num3 == 0)
                 result += "Whizz";
-        } else if (num % num2 == 0)
+        } else if (num % num2 == 0) {
             result += "Buzz";
+            if (num % num3 == 0)
+                result += "Whizz";
+        }
         else if (num % num3 == 0)
             result += "Whizz";
         return result;
