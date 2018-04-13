@@ -35,8 +35,23 @@ public class FizzBuzzGame {
     }
 
     public void start(int count) {
-
+        String result;
+        for (int i = 1; i <= count; i++) {
+            if (containNum1(i))
+                result = "Fizz";
+            else
+                result = String.valueOf(i);
+            results.add(result);
+        }
     }
+
+    private boolean containNum1(int num) {
+        if (num / 10 == 0)
+            return num == num1;
+        return num % 10 == num1 || containNum1(num / 10);
+    }
+
+
 
 
     public List<String> getResults() {
