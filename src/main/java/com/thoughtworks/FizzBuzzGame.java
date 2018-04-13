@@ -37,10 +37,11 @@ public class FizzBuzzGame {
     public void start(int count) {
         String result;
         for (int i = 1; i <= count; i++) {
-            if (containNum1(i))
+            if (containNum1(i)) {
                 result = "Fizz";
-            else
-                result = String.valueOf(i);
+            } else {
+                result = i % num1 == 0 ? "Fizz" : String.valueOf(i);
+            }
             results.add(result);
         }
     }
