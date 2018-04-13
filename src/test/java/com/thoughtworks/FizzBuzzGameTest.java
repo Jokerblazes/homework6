@@ -57,6 +57,17 @@ public class FizzBuzzGameTest {
         fizzBuzzGame.start(7);
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
     }
+
+    //是3和5的倍数同时不包含3的最小的数是15
+    @Test
+    public void should_return_FizzBuzz_when_is_15_multiple() {
+        List<String> expectedResults = Arrays.asList(
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "Whizz", "8", "Fizz", "Buzz",
+                "11", "Fizz", "Fizz", "Whizz", "FizzBuzz"
+        );
+        fizzBuzzGame.start(15);
+        assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
+    }
     
 
 }
