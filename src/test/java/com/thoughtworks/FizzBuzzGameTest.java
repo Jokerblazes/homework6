@@ -22,8 +22,8 @@ public class FizzBuzzGameTest {
     @Test
     public void should_return_Fizz_when_have_3() {
         List<String> expectedResults = Arrays.asList(
-                "1", "2", "Fizz", "4", "5", "6", "7", "8", "9", "10",
-                "11", "12", "Fizz"
+                "1", "2", "Fizz", "4", "5", "Fizz", "7", "8", "Fizz", "10",
+                "11", "Fizz", "Fizz"
         );
         fizzBuzzGame.start(13);
         assertEquals(fizzBuzzGame.getResults(), expectedResults);
