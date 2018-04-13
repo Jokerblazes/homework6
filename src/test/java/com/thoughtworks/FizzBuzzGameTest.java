@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import static org.hamcrest.core.IsEqual.equalTo;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class FizzBuzzGameTest {
@@ -21,20 +22,20 @@ public class FizzBuzzGameTest {
     @Test
     public void should_return_Fizz_when_have_3() {
         List<String> expectedResults = Arrays.asList(
-                "1", "2", "Fizz", "4", "Buzz", "Fizz", "Whizz", "8", "Fizz", "Buzz",
-                "11", "Fizz", "Fizz"
+                "1", "2", "Fizz", "4", "5", "6", "7", "8", "9", "10",
+                "11", "12", "Fizz"
         );
         fizzBuzzGame.start(13);
-        assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
+        assertEquals(fizzBuzzGame.getResults(), expectedResults);
     }
 
     //3的倍数
     @Test
     public void should_return_Fizz_when_is_3_multiple() {
         List<String> expectedResults = Arrays.asList(
-                "1", "2", "Fizz"
+                "1", "2", "Fizz","4", "5", "Fizz"
         );
-        fizzBuzzGame.start(3);
+        fizzBuzzGame.start(6);
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
     }
 
