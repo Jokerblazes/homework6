@@ -48,6 +48,15 @@ public class FizzBuzzGameTest {
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
     }
 
+    //7的倍数
+    @Test
+    public void should_return_Whizz_when_is_7_multiple() {
+        List<String> expectedResults = Arrays.asList(
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "Whizz"
+        );
+        fizzBuzzGame.start(7);
+        assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
+    }
     
 
 }
