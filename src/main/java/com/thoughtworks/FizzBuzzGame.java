@@ -40,7 +40,9 @@ public class FizzBuzzGame {
             if (containNum1(i)) {
                 result = "Fizz";
             } else {
-                result = i % num1 == 0 ? "Fizz" : String.valueOf(i);
+                result = isMultipleAndReturnResult(i);
+                if (result.length() == 0)
+                    result = String.valueOf(i);
             }
             results.add(result);
         }
@@ -52,6 +54,14 @@ public class FizzBuzzGame {
         return num % 10 == num1 || containNum1(num / 10);
     }
 
+    private String isMultipleAndReturnResult(int num) {
+        String result = "";
+        if (num % num1 == 0)
+            result += "Fizz";
+        else if (num % num2 == 0)
+            result += "Buzz";
+        return result;
+    }
 
 
 
