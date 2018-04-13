@@ -80,6 +80,22 @@ public class FizzBuzzGameTest {
         fizzBuzzGame.start(21);
         assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
     }
+
+    //是5和7的倍数同时不包含3的最小的数是70
+    @Test
+    public void should_return_BuzzWhizz_when_is_35_multiple() {
+        List<String> expectedResults = Arrays.asList(
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "Whizz", "8", "Fizz", "Buzz",
+                "11", "Fizz", "Fizz", "Whizz", "FizzBuzz", "16", "17", "Fizz", "19", "Buzz",
+                "FizzWhizz", "22", "Fizz", "Fizz", "Buzz", "26", "Fizz", "Whizz", "29", "Fizz",
+                "Fizz", "Fizz", "Fizz", "Fizz", "Fizz", "Fizz", "Fizz", "Fizz", "Fizz", "Buzz",
+                "41", "FizzWhizz", "Fizz", "44", "FizzBuzz", "46", "47", "Fizz", "Whizz", "Buzz",
+                "Fizz", "52", "Fizz", "Fizz", "Buzz", "Whizz", "Fizz", "58", "59", "FizzBuzz",
+                "61", "62", "Fizz", "64", "Buzz", "Fizz", "67", "68", "Fizz", "BuzzWhizz"
+        );
+        fizzBuzzGame.start(70);
+        assertThat(fizzBuzzGame.getResults(), equalTo(expectedResults));
+    }
     
 
 }
