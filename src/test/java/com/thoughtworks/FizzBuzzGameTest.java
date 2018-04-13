@@ -22,7 +22,7 @@ public class FizzBuzzGameTest {
     @Test
     public void should_return_Fizz_when_have_3() {
         List<String> expectedResults = Arrays.asList(
-                "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz",
+                "1", "2", "Fizz", "4", "Buzz", "Fizz", "Whizz", "8", "Fizz", "Buzz",
                 "11", "Fizz", "Fizz"
         );
         fizzBuzzGame.start(13);
