@@ -11,6 +11,8 @@ import java.util.List;
 public class FizzBuzzGameV2 {
     private List<String> results = new ArrayList<>();
     private int num1 = 3;
+    private int num2 = 5;
+
     public void start(int count) {
     }
 
@@ -37,7 +39,15 @@ public class FizzBuzzGameV2 {
         return isMultipleOfNumber1(num) ? "Fizz" : String.valueOf(num);
     }
 
+    public String getBuzzMultipleOfNumber2OrNumber(int num) {
+        return isMultipleOfNumber2(num) ? "Buzz" : String.valueOf(num);
+    }
+
     private boolean isMultipleOfNumber1(int num) {
         return num % num1 == 0;
+    }
+
+    private boolean isMultipleOfNumber2(int num) {
+        return num % num2 == 0;
     }
 }

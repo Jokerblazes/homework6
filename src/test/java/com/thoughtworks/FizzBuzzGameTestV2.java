@@ -39,4 +39,12 @@ public class FizzBuzzGameTestV2 {
         assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1OrNumber(5),"5");
     }
 
+    //5的倍数
+    @Test
+    public void should_return_Buzz_when_is_5_multiple() {
+        assertEquals(fizzBuzzGame.getBuzzMultipleOfNumber2OrNumber(5),"Buzz");
+        assertEquals(fizzBuzzGame.getBuzzMultipleOfNumber2OrNumber(10),"Buzz");
+        assertEquals(fizzBuzzGame.getBuzzMultipleOfNumber2OrNumber(4),"4");
+    }
+
 }
