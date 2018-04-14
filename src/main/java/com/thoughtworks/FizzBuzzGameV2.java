@@ -39,7 +39,7 @@ public class FizzBuzzGameV2 {
         return isMultipleOfNumber1(num) ? "Fizz" : String.valueOf(num);
     }
 
-    public String getBuzzMultipleOfNumber2OrNumber(int num) {
+    public String getBuzzIfMultipleOfNumber2OrNumber(int num) {
         return isMultipleOfNumber2(num) ? "Buzz" : String.valueOf(num);
     }
 
