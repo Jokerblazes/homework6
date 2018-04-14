@@ -63,4 +63,12 @@ public class FizzBuzzGameTestV2 {
         assertEquals(fizzBuzzGame.getFizzBuzzOrNumber(15),"FizzBuzz");
     }
 
+    //是3和7的倍数同时不包含3的最小的数是21
+    @Test
+    public void should_return_FizzWhizz_when_is_21_multiple() {
+        assertEquals(fizzBuzzGame.getFizzWhizzOrNumber(3),"3");
+        assertEquals(fizzBuzzGame.getFizzBuzzOrNumber(7),"7");
+        assertEquals(fizzBuzzGame.getFizzBuzzOrNumber(21),"21");
+    }
+
 }
