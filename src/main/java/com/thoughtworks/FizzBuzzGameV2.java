@@ -15,6 +15,29 @@ public class FizzBuzzGameV2 {
     private int num3 = 7;
 
     public void start(int count) {
+        for (int i = 1; i <= count ; i++) {
+            if (isContainNumber1(i)) {
+                results.add(getFizzIfContainNumber1OrNumber(num1));
+            } else {
+                if (isMultipleOfNumber1(i) && !isMultipleOfNumber2(i) && !isMultipleOfNumber3(i)) {
+                    results.add(getFizzIfMultipleOfNumber1OrNumber(i));
+                } else if (!isMultipleOfNumber1(i) && isMultipleOfNumber2(i) && !isMultipleOfNumber3(i)) {
+                    results.add(getBuzzIfMultipleOfNumber2OrNumber(i));
+                } else if (!isMultipleOfNumber1(i) && !isMultipleOfNumber2(i) && isMultipleOfNumber3(i)) {
+                    results.add(getWhizzIfMultipleOfNumber3OrNumber(i));
+                } else if (isMultipleOfNumber1(i) && isMultipleOfNumber2(i) && !isMultipleOfNumber3(i)) {
+                    results.add(getFizzBuzzOrNumber(i));
+                } else if (isMultipleOfNumber1(i) && !isMultipleOfNumber2(i) && isMultipleOfNumber3(i)) {
+                    results.add(getFizzWhizzOrNumber(i));
+                } else if (!isMultipleOfNumber1(i) && isMultipleOfNumber2(i) && isMultipleOfNumber3(i)) {
+                    results.add(getBuzzWhizzOrNumber(i));
+                } else if (isMultipleOfNumber1(i) && isMultipleOfNumber2(i) && isMultipleOfNumber3(i)) {
+                    results.add(getFizzBuzzWhizzOrNumber(i));
+                } else {
+                    results.add(String.valueOf(i));
+                }
+            }
+        }
     }
 
 

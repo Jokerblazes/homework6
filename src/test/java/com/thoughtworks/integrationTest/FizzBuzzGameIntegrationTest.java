@@ -4,6 +4,7 @@ Don't change this file
 */
 
 import com.thoughtworks.FizzBuzzGame;
+import com.thoughtworks.FizzBuzzGameV2;
 import org.junit.Test;
 
 import java.lang.reflect.Array;
@@ -29,7 +30,7 @@ public class FizzBuzzGameIntegrationTest {
         );
 
 
-        FizzBuzzGame game = new FizzBuzzGame();
+        FizzBuzzGameV2 game = new FizzBuzzGameV2();
         game.start(100);
         List<String> results = game.getResults();
         assertThat(results, equalTo(expectedResults));
