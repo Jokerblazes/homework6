@@ -71,4 +71,9 @@ public class FizzBuzzGameV2 {
         return (isMultipleOfNumber1(num) && isMultipleOfNumber3(num))
                 ? "FizzWhizz" : String.valueOf(num);
     }
+
+    public String getBuzzWhizzOrNumber(int num) {
+        return (isMultipleOfNumber2(num) && isMultipleOfNumber3(num))
+                ? "BuzzWhizz" : String.valueOf(num);
+    }
 }
