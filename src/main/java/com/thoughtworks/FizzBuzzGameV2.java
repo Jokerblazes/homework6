@@ -15,7 +15,8 @@ public class FizzBuzzGameV2 {
     }
 
 
-    public String getFizzOrNumber(int num) {
+
+    public String getFizzIfContainNumber1OrNumber(int num) {
         return isContainNumber1(num) ? "Fizz" : String.valueOf(num);
     }
 
@@ -29,5 +30,14 @@ public class FizzBuzzGameV2 {
 
     public List<String> getResults() {
         return results;
+    }
+
+
+    public String getFizzIfMultipleOfNumber1OrNumber(int num) {
+        return isMultipleOfNumber1(num) ? "Fizz" : String.valueOf(num);
+    }
+
+    private boolean isMultipleOfNumber1(int num) {
+        return num % num1 == 0;
     }
 }

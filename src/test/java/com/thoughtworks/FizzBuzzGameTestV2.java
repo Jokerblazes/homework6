@@ -4,7 +4,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 
+import java.util.Arrays;
+import java.util.List;
+
+import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 /**
  * @Author Joker
@@ -22,9 +27,16 @@ public class FizzBuzzGameTestV2 {
     //13 中包含3
     @Test
     public void should_return_Fizz_when_have_3() {
-        assertEquals(fizzBuzzGame.getFizzOrNumber(6),"6");
-        assertEquals(fizzBuzzGame.getFizzOrNumber(13), "Fizz");
+        assertEquals(fizzBuzzGame.getFizzIfContainNumber1OrNumber(6),"6");
+        assertEquals(fizzBuzzGame.getFizzIfContainNumber1OrNumber(13), "Fizz");
     }
 
+
+    //3的倍数
+    @Test
+    public void should_return_Fizz_when_is_3_multiple() {
+        assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1OrNumber(3),"Fizz");
+        assertEquals(fizzBuzzGame.getFizzIfMultipleOfNumber1OrNumber(5),"5");
+    }
 
 }
