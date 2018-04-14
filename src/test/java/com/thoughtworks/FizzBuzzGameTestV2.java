@@ -79,4 +79,13 @@ public class FizzBuzzGameTestV2 {
         assertEquals(fizzBuzzGame.getBuzzWhizzOrNumber(35),"BuzzWhizz");
     }
 
+    //是3、5、7的倍数同时不包含3的最小的数是105
+    @Test
+    public void should_return_FizzBuzzWhizz_when_is_105_multiple() {
+        assertEquals(fizzBuzzGame.getFizzBuzzWhizzOrNumber(3),"3");
+        assertEquals(fizzBuzzGame.getFizzBuzzWhizzOrNumber(5),"5");
+        assertEquals(fizzBuzzGame.getFizzBuzzWhizzOrNumber(7),"7");
+        assertEquals(fizzBuzzGame.getFizzBuzzWhizzOrNumber(105),"FizzBuzzWhizz");
+    }
+
 }
