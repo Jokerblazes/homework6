@@ -59,4 +59,11 @@ public class FizzBuzzGameV2 {
     private boolean isMultipleOfNumber3(int num) {
         return num % num3 == 0;
     }
+
+
+    public String getFizzBuzzOrNumber(int num) {
+        if (isMultipleOfNumber1(num) && isMultipleOfNumber2(num))
+            return "FizzBuzz";
+        return String.valueOf(num);
+    }
 }
