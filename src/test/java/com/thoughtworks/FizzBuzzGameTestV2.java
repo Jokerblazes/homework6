@@ -47,4 +47,12 @@ public class FizzBuzzGameTestV2 {
         assertEquals(fizzBuzzGame.getBuzzIfMultipleOfNumber2OrNumber(4),"4");
     }
 
+    //7的倍数
+    @Test
+    public void should_return_Whizz_when_is_7_multiple() {
+        assertEquals(fizzBuzzGame.getWhizzIfMultipleOfNumber3OrNumber(7),"Whizz");
+        assertEquals(fizzBuzzGame.getWhizzIfMultipleOfNumber3OrNumber(14),"Whizz");
+        assertEquals(fizzBuzzGame.getWhizzIfMultipleOfNumber3OrNumber(16),"16");
+    }
+
 }
